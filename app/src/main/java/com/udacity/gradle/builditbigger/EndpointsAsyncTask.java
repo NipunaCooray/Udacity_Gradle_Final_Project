@@ -18,6 +18,8 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
     private Context context;
     String text;
 
+    public String resultGlobal;
+
 
     @Override
     protected String doInBackground(Context...params) {
@@ -50,6 +52,7 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
+        resultGlobal = result;
         final Intent intent = new Intent(context, JokeViewerActivity.class);
         intent.putExtra("joke_message",result);
         context.startActivity(intent);

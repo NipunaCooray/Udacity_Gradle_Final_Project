@@ -1,11 +1,14 @@
 package com.udacity.gradle.builditbigger;
 
 
-import android.test.AndroidTestCase;
-import android.util.Log;
+import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.runner.RunWith;
 
-public class TestNonEmptyString extends AndroidTestCase {
+@RunWith(AndroidJUnit4.class)
+public class TestNonEmptyString {
+
+    
 
 
 
